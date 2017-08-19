@@ -1,0 +1,10 @@
+base-image: pytorch
+python-version: 2
+python-entry: main.py
+input:
+        args:
+                - type: filename
+output: stdout
+system-packages:
+        - opencv
+        - python-opencv
