@@ -1,4 +1,4 @@
-base-image: pytorch
+openbrain-base-image: pytorch
 python-version: 2
 python-entry: main.py
 input:
