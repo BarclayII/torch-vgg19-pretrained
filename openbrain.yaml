@@ -1,9 +1,9 @@
-openbrain-base-image: pytorch
-python-version: 2
-python-entry: main.py
-input:
-        args:
-                - type: filename
+openbrain-base-image: pytorch27
+entry: python
+args:
+        - main.py
+        - type: filename
+input: null
 output: stdout
 system-packages:
         - opencv
