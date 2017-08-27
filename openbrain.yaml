@@ -6,5 +6,4 @@ args:
 input: null
 output: stdout
 system-packages:
-        - opencv
         - python-opencv
