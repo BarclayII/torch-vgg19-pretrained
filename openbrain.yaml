@@ -8,3 +8,4 @@ output: stdout
 output-directory: output
 system-packages:
         - python-opencv
+        - python-dev
