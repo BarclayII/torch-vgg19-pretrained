@@ -35,5 +35,5 @@ for i, idx in enumerate(y.argmax(axis=1)):
     print classes[idx]
     PL.imshow(old_x[i].transpose(1, 2, 0))
     PL.title(classes[idx])
-    PL.savefig('%s/%d.png' % sys.argv[1], i)
+    PL.savefig('%s/%d.png' % (sys.argv[1], i))
     PL.close()
