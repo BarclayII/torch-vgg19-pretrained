@@ -2,12 +2,13 @@ openbrain-base-image: pytorch27
 entry: python
 args:
         - main.py
-        - type: output-directory
-        - type: filename
+        - type: directory
+          io: output
+        - type: file
+          io: input
         - ...
 input: null
 output: stdout
-output-directory: output
 system-packages:
         - python-opencv
         - python-dev
