@@ -14,12 +14,12 @@ imgs = []
 with open('imagenet_labels2') as f:
     classes = pickle.load(f)
 
-for filename in sys.argv[1:]:
+sh.mkdir('-p', sys.argv[1])
+
+for filename in sys.argv[2:]:
     x = SPM.imread(filename, mode='RGB')
     x = SPM.imresize(x, (224, 224))
     x = NP.expand_dims(x, 0)
-
-    sh.mkdir('-p', 'output')
 
     x = x.transpose([0, 3, 1, 2]) / 255.
     imgs.append(x)
@@ -35,5 +35,5 @@ for i, idx in enumerate(y.argmax(axis=1)):
     print classes[idx]
     PL.imshow(old_x[i].transpose(1, 2, 0))
     PL.title(classes[idx])
-    PL.savefig('output/%d.png' % i)
+    PL.savefig('%s/%d.png' % sys.argv[1], i)
     PL.close()
