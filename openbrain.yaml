@@ -6,6 +6,7 @@ args:
           io: output
         - type: file
           io: input
+          category: image
         - ...
 input: null
 output: stdout
