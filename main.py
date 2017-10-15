@@ -11,7 +11,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as PL
 
 imgs = []
-with open('imagenet_labels2') as f:
+with open('imagenet_labels2', 'rb') as f:
     classes = pickle.load(f, encoding='latin1')
 
 sh.mkdir('-p', sys.argv[1])
