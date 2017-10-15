@@ -1,4 +1,4 @@
-openbrain-base-image: pytorch27
+openbrain-base-image: all
 entry: python
 args:
         - main.py
@@ -10,6 +10,3 @@ args:
         - ...
 input: null
 output: stdout
-system-packages:
-        - python-opencv
-        - python-dev
