@@ -32,7 +32,7 @@ vgg19 = TV.models.vgg19(pretrained=True)
 vgg19.eval()
 y = vgg19(x).data.numpy()
 for i, idx in enumerate(y.argmax(axis=1)):
-    print classes[idx]
+    print(classes[idx])
     PL.imshow(old_x[i].transpose(1, 2, 0))
     PL.title(classes[idx])
     PL.savefig('%s/%d.png' % (sys.argv[1], i))
